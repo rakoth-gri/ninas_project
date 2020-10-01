@@ -1,0 +1,69 @@
+// для мобильных расширений
+@media (max-width: 767.98px)
+    header
+        height: 550px
+        .bg_header
+            height: 550px
+        div.row
+            padding-top: 45px
+        .header__title h1
+            font-size: 45px 
+        .header__subtitle h2
+            font-size: 26px          
+        nav.menu
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+            position: absolute
+            top: 10px
+            left: 10px
+            background-color: rgba(0, 0, 0, .75)
+            width: 45%
+            height: 75vh
+            transition: 1s all
+            &_active
+                left: -100%
+            a.menu__link
+                font-size: 15px
+                margin-bottom: 10px
+                border-right: none
+        div.header__burger
+            display: block
+            position: absolute
+            top: 25px
+            right: 45px
+            height: 21px
+            width: 25px
+            .burger
+                display: block
+                margin-bottom: 3px
+                height: 4px
+                width: 100%
+                background-color: $head-color
+        div.header__burger_active
+            .burger
+                margin-top: -7px
+                &:nth-last-child(1)
+                    transform: rotate(45deg)
+                &:nth-last-child(2)
+                    display: none
+                &:nth-last-child(3)
+                    transform: rotate(-45deg)
+        .header__callback__desc
+            font-size: 14px
+            text-align: right 
+        .header__callback__link
+            font-size: 12px
+            font-weight: 500
+            text-align: right
+
+    .description
+        &__subtitle h2
+            font-size: 26px
+        &__block
+            &__desc
+                h3
+                    font-size: 18px
+                div.block__desc
+                    font-size: 15px
+

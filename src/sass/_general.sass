@@ -1,26 +1,34 @@
 @mixin title    
-    font-size: 26px   
+    font-size: 22px   
     font-weight: 700
     color: #2e2e2e  
     text-transform: uppercase
 
-$head-color: #ec644b     
+$head-color: #ec644b
+$text_color: #1c1c1c    
     
 *
     font-family: 'Roboto', sans-serif
     padding: 0px
     margin: 0px
     box-sizing: border-box
+    color: $text_color
 
 h1        
     font-size: 65px   
     font-weight: 700
     color: $head-color 
     text-transform: uppercase
+    text-shadow: 3px 3px 6px #000
 
 span.social
     font-size: 34px
     color: $head-color
 
 h3 
-    @include title     
+    @include title 
+
+h2
+    @include title
+    font-size: 50px
+    text-shadow: 2px 1px 6px $head-color

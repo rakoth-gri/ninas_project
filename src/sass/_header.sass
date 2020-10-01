@@ -1,22 +1,76 @@
 header
+    position: relative
     padding: 10px
-    .header__logo
-        margin: auto
+    height: 650px
+    // .header__logo
+    //     margin: auto
+    //     img
+    //         width: 100%
+    //         display: block
+    //         border-radius: 50%
+    .row
+        padding-top: 35px 
     nav.menu
         padding: 0px 
         display: flex
         justify-content: space-around
         align-items: center
-        a
+        .menu__link
             text-decoration: none
+            display: block
+            border-right: 2px #000 solid
+            padding-right: 4px
+            font-size: 17px
+            text-transform: uppercase
+            transition: 1s all
+            color: $head-color
+            &:hover
+                font-size: 18px
+            &:nth-child(6)
+                border-right: none
+    .header__callback
+        display: flex
+        justify-content: center
+        flex-direction: column    
     .header__callback__desc
-        text-align: right
-        
+        text-align: center   
     .header__callback__link
-        text-align: right
+        text-align: center
         display: block
         margin-top: 5px
-    button.btn.btn-callback
+        text-decoration: none
+    .header__btn
+        display: flex
+        align-items: center    
+        button.btn.btn-callback
+            display: block
+            margin: 0 auto
+            outline: none
+            &:hover
+                background-color: #fff
+                color: #000
+                border: 1px solid #000
+                font-weight: 500
+    .header__title
+        text-align: center
+        margin-top: 100px
+    .header__subtitle
+        text-align: center
+        margin-top: 50px
+        text-decoration:     
+    .header__burger
+        display: none
+    .bg_header
+        position: absolute
+        top: 0px
+        z-index: -1
+        filter: blur(4px)
+        width: 100%
         display: block
-        margin: 0 auto
+        height: 650px
+       
+                    
+                    
+            
+                
         
