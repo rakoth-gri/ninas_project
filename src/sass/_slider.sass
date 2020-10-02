@@ -1,0 +1,28 @@
+.slider
+    div.slider__content__block
+        display: flex
+        justify-content: space-around
+        align-items: flex-start
+        img
+            display: block
+            width: 48%
+            height: auto
+        .slider__content__desc
+            width: 48%
+            .desc
+                font-size: 17px
+                width: 100%
+                text-align: justify
+                color: #2e2e2e
+                word-spacing: 1px
+                font-weight: 400
+                background-color: rgba(0,0,0, 0.06)
+                box-shadow: 1px 1px 4px $head-color
+                &:first-letter
+                    font-size: 23px
+                    color: #ec644b
+            h3
+                @include h3
+                display: block
+                margin-bottom: 5px
+                text-align: left     
