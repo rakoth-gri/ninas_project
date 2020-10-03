@@ -10,9 +10,14 @@
             align-items: center
             margin-top: 25px
             div.description__block__icon
-                width: 100%
+                width: 75px
+                height: 75px
+                border-radius: 50%
+                background-color: #b3adab
+                border: 1px dashed #fc7979
                 display: flex
                 justify-content: center
+                align-items: center
                 margin-bottom: 20px
             div.description__block__desc
                 width: 100%
@@ -67,7 +72,10 @@
         &__subtitle h2
             font-size: 35px
         &__block
-            &__desc
+            justify-content: space-around
+            align-items: center
+            div.description__block__desc
+                width: 80%
                 div.block__title
                     text-align: center
                     h3
@@ -75,7 +83,20 @@
                         text-align: center
                 div.block__desc
                     font-size: 15px
-    
+            div.description__block__icon
+                width: 65px
+                height: 65px
+                border-radius: 50%
+                background-color: #b3adab
+                border: 1px dashed #fc7979
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-top: 0px
+                margin-left: 10px
+                span
+                    font-size: 40px
+     
     div.slider
         margin-top: 20px
         div.row
@@ -112,7 +133,8 @@
             flex-direction: column
             align-items: center
             justify-content: center
-            position: absolute
+            position: fixed
+            z-index: 2
             top: 10px
             left: 10px
             background-color: rgba(0, 0, 0, .90)
@@ -127,7 +149,8 @@
                 border-right: none
         div.header__burger
             display: block
-            position: absolute
+            position: fixed
+            z-index: 2
             top: 18px
             right: 18px
             height: 21px
@@ -153,19 +176,33 @@
             margin-bottom: 15px 
             h2
                 font-size: 30px
-        &__block
+        .description__block
             flex-direction: column
             align-items: center
             justify-content: space-between
             height: auto
+            margin-top: 10px
             div.description__block__desc
                 width: 100%
                 div.block__title
                     h3
                         font-size: 20px
                         text-align: center
+                div.block__desc
+                    margin-top: 6px        
             div.description__block__icon
-                margin-bottom: 15px
+                width: 65px
+                height: 65px
+                border-radius: 50%
+                background-color: #b3adab
+                border: 1px dashed #fc7979
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-top: 0px
+                margin: 20px auto
+                span
+                    font-size: 40px
 
     div.slider
         margin-top: 20px
@@ -175,10 +212,12 @@
             div.slider__content__wrapper
                 position: relative
                 div.slider__content__block
+                    border-radius: 13px
                     flex-direction: column
                     img
                         width: 100%
                         border-radius: 13px
+                        margin: 0px
                     .slider__content__desc
                         width: 100%
                         h3
@@ -208,13 +247,14 @@
             flex-direction: column
             align-items: center
             justify-content: space-around
-            position: absolute
+            position: fixed
             top: 10px
             left: 10px
             background-color: rgba(0, 0, 0, .75)
             width: 45%
             height: 65vh
             transition: 1s all
+            z-index: 2
             &_active
                 left: -100%
             a.menu__link
@@ -223,7 +263,8 @@
                 border-right: none
         div.header__burger
             display: block
-            position: absolute
+            position: fixed
+            z-index: 2
             top: 15px
             right: 15px
             height: 21px
@@ -256,12 +297,26 @@
     .description
         &__subtitle h2
             font-size: 26px
-        &__block
+        .description__block
+            align-items: center
             &__desc
                 h3
                     font-size: 18px
                 div.block__desc
                     font-size: 15px
+            div.description__block__icon
+                width: 75px
+                height: 75px
+                border-radius: 50%
+                background-color: #b3adab
+                border: 1px dashed #fc7979
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-top: 0px
+                margin: 0 auto
+                span
+                    font-size: 45px        
 
     div.slider
         margin-top: 20px
@@ -272,9 +327,11 @@
                 position: relative
                 div.slider__content__block
                     flex-direction: column
+                    border-radius: 10px
                     img
                         width: 100%
                         border-radius: 10px
+                        margin: 0px
                     .slider__content__desc
                         width: 100%
                         h3
@@ -312,7 +369,7 @@
                 border-right: none
         div.header__burger
             display: block
-            position: absolute
+            position: fixed
             top: 10px
             right: 10px
             height: 21px
@@ -343,18 +400,22 @@
     .description
         &__subtitle h2
             font-size: 20px
-        &__block
+        div.description__block
             flex-direction: column
             align-items: center
+            div.description__block__icon
+                width: 55px
+                height: 55px
+                margin: 12px auto
+                span
+                    font-size: 35px  
             .description__block__desc
                 width: 100%
                 div.block__title
                     h3
                         font-size: 17px
                         text-align: center
-            .description__block__icon
-                width: 100%
-                margin-bottom: 15px 
+            
 
     div.slider
         margin-top: 20px
@@ -365,9 +426,11 @@
                 position: relative
                 div.slider__content__block
                     flex-direction: column
+                    border-radius: 7px
                     img
                         width: 100%
                         border-radius: 7px
+                        margin: 0px
                     .slider__content__desc
                         width: 100%
                         h3
