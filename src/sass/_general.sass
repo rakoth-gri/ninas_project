@@ -1,3 +1,5 @@
+// Cоздание миксинов в проекте  
+    
 @mixin title    
     font-size: 22px   
     font-weight: 700
@@ -8,8 +10,12 @@
     text-align: left
     color: $head-color
 
+// Cоздание  ПЕРЕМЕННЫХ! основных цветов проекта   
+
 $head-color: #ec644b
 $text_color: #1c1c1c    
+
+// Задание генеральных свойств структуры и блоков        
     
 *
     font-family: 'Roboto', sans-serif
@@ -25,9 +31,17 @@ h1
     text-transform: uppercase
     text-shadow: 3px 3px 6px #000
 
+// Cтилизация иконок в проекте 
+
 span.social
     font-size: 34px
     color: $head-color
+
+span.features
+    font-size: 34px
+    color: $head-color    
+
+// Cтилизация заголовков в проекте     
 
 h3 
     @include title 

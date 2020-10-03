@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fontsicon/icomoon.ttf?p9de7y') format('truetype'), url('../fontsicon/icomoon.svg?p9de7y#icomoon') format('svg');
+  src: url('../fontsicon/icomoon.ttf?8784qn') format('truetype'),
+  url('../fontsicon/icomoon.svg?8784qn#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -20,6 +21,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-key:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\e901";
+}
+.icon-settings:before {
+  content: "\e902";
+}
+.icon-study:before {
+  content: "\e903";
+}
+.icon-trophy:before {
+  content: "\e904";
+}
+.icon-rocket:before {
+  content: "\e9a5";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+.icon-arrow-left2:before {
+  content: "\ea40";
+}
 .icon-mail:before {
   content: "\ea83";
 }
@@ -33,7 +58,3 @@
   content: "\ea98";
 }
 
-/* <span class="icon-mail"></span> */
-/* <span class="icon-whatsapp"></span> */
-/* <span class="icon-instagram"></span> */
-/* <span class="icon-vk"></span> */

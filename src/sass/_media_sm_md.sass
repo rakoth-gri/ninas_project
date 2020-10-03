@@ -1,3 +1,39 @@
+// для  девайсов col-xl и больше
+    
+@media (min-width: 1200px)
+
+    .description
+        &__block
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            margin-top: 25px
+            div.description__block__icon
+                width: 100%
+                display: flex
+                justify-content: center
+                margin-bottom: 20px
+            div.description__block__desc
+                width: 100%
+                display: flex
+                justify-content: space-between
+                flex-direction: column
+                h3
+                    text-align: center
+    div.slider
+        margin-top: 20px
+        div.row
+            width: 95%
+            margin: 0 auto
+            div.slider__content__wrapper
+                position: relative
+                button.slick-prev
+                    left: -50px
+                button.slick-next
+                    right: -50px
+                       
+              
 // для  девайсов col-lg и больше
 
 @media (min-width: 992px) and (max-width: 1199.98px)
@@ -39,6 +75,20 @@
                         text-align: center
                 div.block__desc
                     font-size: 15px
+    
+    div.slider
+        margin-top: 20px
+        div.row
+            width: 95%
+            margin: 0 auto
+            div.slider__content__wrapper
+                position: relative
+                button.slick-prev
+                    left: -45px
+                button.slick-next
+                    right: -45px
+                span.features    
+                   font-size: 32px             
 
 // для мобильных девайсов col-md                    
 
@@ -53,11 +103,11 @@
         .header__title
             margin-top: 30px 
             h1
-                font-size: 55px 
+                font-size: 40px 
         .header__subtitle
             margin-top: 25px  
             h2
-                font-size: 34px          
+                font-size: 30px          
         nav.menu
             flex-direction: column
             align-items: center
@@ -102,7 +152,7 @@
         &__subtitle
             margin-bottom: 15px 
             h2
-                font-size: 35px
+                font-size: 30px
         &__block
             flex-direction: column
             align-items: center
@@ -116,9 +166,31 @@
                         text-align: center
             div.description__block__icon
                 margin-bottom: 15px
+
+    div.slider
+        margin-top: 20px
+        div.row
+            width: 95%
+            margin: 0 auto
+            div.slider__content__wrapper
+                position: relative
+                div.slider__content__block
+                    flex-direction: column
+                    img
+                        width: 100%
+                        border-radius: 13px
+                    .slider__content__desc
+                        width: 100%
+                        h3
+                            font-size: 20px
+                            text-align: center
+                button.slick-prev
+                    left: -40px
+                button.slick-next
+                    right: -40px
+                span.features    
+                   font-size: 28px               
                                
-       
-    
 // для мобильных девайсов sm
 
 @media (max-width: 767.98px)
@@ -191,6 +263,32 @@
                 div.block__desc
                     font-size: 15px
 
+    div.slider
+        margin-top: 20px
+        div.row
+            width: 95%
+            margin: 0 auto
+            div.slider__content__wrapper
+                position: relative
+                div.slider__content__block
+                    flex-direction: column
+                    img
+                        width: 100%
+                        border-radius: 10px
+                    .slider__content__desc
+                        width: 100%
+                        h3
+                            font-size: 18px
+                            text-align: center
+                        .desc
+                            font-size: 15px  
+                button.slick-prev
+                    left: -30px
+                button.slick-next
+                    right: -30px
+                span.features    
+                   font-size: 24px                 
+
 // для мобильных девайсов xs
 
 @media (max-width: 575.98px)                        
@@ -256,6 +354,32 @@
                         text-align: center
             .description__block__icon
                 width: 100%
-                margin-bottom: 15px                                            
+                margin-bottom: 15px 
+
+    div.slider
+        margin-top: 20px
+        div.row
+            width: 90%
+            margin: 0 auto
+            div.slider__content__wrapper
+                position: relative
+                div.slider__content__block
+                    flex-direction: column
+                    img
+                        width: 100%
+                        border-radius: 7px
+                    .slider__content__desc
+                        width: 100%
+                        h3
+                            font-size: 17px
+                            text-align: center
+                        .desc
+                            font-size: 14px    
+                button.slick-prev
+                    left: -25px
+                button.slick-next
+                    right: -25px
+                span.features    
+                   font-size: 24px                                                         
                         
 

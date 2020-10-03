@@ -4,18 +4,11 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed: 1000,
+        speed: 600,
+        autoplay: true,
         lazyLoad: 'ondemand',
-        prevArrow: '<button type="button" class="slick-prev"> <img src="icons/prev.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"> <img src="icons/next.png"></button>'
+        prevArrow: '<button type="button" class="slick-prev"> <span class="icon-arrow-left2 features"></span> </button>',
+        nextArrow: '<button type="button" class="slick-next"> <span class="icon-arrow-right2 features"></span> </button>'
     });
-
-
-
-
-
-
-
-
 
 });
