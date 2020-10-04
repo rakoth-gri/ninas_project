@@ -15,6 +15,7 @@ header
         display: flex
         justify-content: space-around
         align-items: center
+        z-index: 1
         .menu__link
             text-decoration: none
             display: block
@@ -22,12 +23,15 @@ header
             padding-right: 4px
             font-size: 17px
             text-transform: uppercase
-            transition: 1s all
+            transition: 0.5s all
             color: $head-color
             &:hover
                 font-size: 18px
             &:nth-child(6)
                 border-right: none
+    .header__burger
+        display: none
+        z-index: 1            
     .header__callback
         display: flex
         justify-content: center

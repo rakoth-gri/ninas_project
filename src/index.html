@@ -135,6 +135,40 @@
             </div>
 		</div>
     </div>
+
+    <section class="ordering">
+        <div class="container">
+           <h3> Запись на консультацию </h3>
+           <div class="ordering__wrapper">
+                <div class="ordering__icon">
+                    <img src="img/pencil.svg" alt="ordering__icon">
+                </div>
+                <form action="" class="ordering__form" action="#" id="main_form">
+                    <input name="yourname" placeholder="Ваше имя" type="text" required>
+                    <input name="tel" placeholder="Ваш номер телефона" type="tel" required>
+                    <input name="email" placeholder="Ваш e-mail" type="email" required>
+                    <textarea name="textarea" placeholder="Ваш запрос" required class="text_field" autofocus></textarea>
+                    <button class="btn btn-form"> отправить заявку </button>
+                </form>
+            </div> 
+        </div>
+    </section>
+
+    <div class="modal" id="modal_box">
+        <div class="modal__window" id="order">
+            <div class="exit">&times;</div>
+            <div class="modal__window__title"> 
+                <h3> заявка на консультацию </h3>
+            </div>
+            <form class="ordering__form_2" action="#">
+                <input name="yourname" placeholder="Введите имя" type="text" required>
+                    <input name="tel" placeholder="Ваш телефон" type="tel" required>
+                    <input name="email" placeholder="Ваш e-mail" type="email" required>
+                    <textarea name="textarea" placeholder="Тема обращения" required class="text_field" autofocus></textarea>
+                    <button class="btn btn-form"> отправить заявку</button>
+            </form>
+        </div>    
+    </div>
     
     <script type="text/javascript" src="JS/jquery.min.js"></script>
 	<script type="text/javascript" src="JS/slick.min.js"></script>

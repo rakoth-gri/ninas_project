@@ -1,0 +1,55 @@
+.ordering
+    padding: 25px 0px 25px 0px
+    h3 
+    @include title
+    text-align: center
+    
+    div.ordering__wrapper
+        background-color:#e5dfdc
+        width: 95%
+        margin: 25px auto
+        .ordering__icon
+            width: 75px
+            height: 75px
+            margin: 0 auto
+            display: flex
+            justify-content: center
+            border-radius: 50%
+            background-color: #b3adab
+            border: 2px solid #fc7979
+            align-items: center
+            img
+                width: 50px
+                height: 50px
+        .ordering__form
+            margin: 35px 0
+            display: flex
+            justify-content: space-around
+            flex-wrap: wrap
+            input
+                @include form_element
+                text-decoration: none
+                &:focus
+                    border-bottom: 2px solid #fc7979               
+            .text_field
+                @include form_element
+                margin-top: 30px
+                height: auto
+                text-decoration: none
+                &:focus
+                    border-bottom: 2px solid #fc7979 
+            .btn.btn-form
+                margin-top: 30px
+                width: 30%
+                transition: 0.3s all
+                &:hover
+                    background-color: #e5dfdc
+                    border: 1px dashed #d95252
+                    color: #d95252
+                    font-size: 19px
+                    
+
+         
+
+                      
+

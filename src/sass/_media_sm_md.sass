@@ -9,15 +9,10 @@
             justify-content: space-between
             align-items: center
             margin-top: 25px
+            width: 48%
             div.description__block__icon
                 width: 75px
                 height: 75px
-                border-radius: 50%
-                background-color: #b3adab
-                border: 1px dashed #fc7979
-                display: flex
-                justify-content: center
-                align-items: center
                 margin-bottom: 20px
             div.description__block__desc
                 width: 100%
@@ -86,17 +81,11 @@
             div.description__block__icon
                 width: 65px
                 height: 65px
-                border-radius: 50%
-                background-color: #b3adab
-                border: 1px dashed #fc7979
-                display: flex
-                justify-content: center
-                align-items: center
                 margin-top: 0px
                 margin-left: 10px
                 span
                     font-size: 40px
-     
+
     div.slider
         margin-top: 20px
         div.row
@@ -109,7 +98,11 @@
                 button.slick-next
                     right: -45px
                 span.features    
-                   font-size: 32px             
+                   font-size: 32px
+
+    div.modal
+        div.modal__window
+            width: 50%                              
 
 // для мобильных девайсов col-md                    
 
@@ -129,20 +122,19 @@
             margin-top: 25px  
             h2
                 font-size: 30px          
-        nav.menu
+        .menu
             flex-direction: column
             align-items: center
             justify-content: center
             position: fixed
-            z-index: 2
             top: 10px
-            left: 10px
+            left: -100%
             background-color: rgba(0, 0, 0, .90)
             width: 45%
             height: 65vh
             transition: 1s all
             &_active
-                left: -100%
+                left: 10px
             a.menu__link
                 font-size: 20px
                 margin-bottom: 27px
@@ -150,7 +142,6 @@
         div.header__burger
             display: block
             position: fixed
-            z-index: 2
             top: 18px
             right: 18px
             height: 21px
@@ -193,12 +184,6 @@
             div.description__block__icon
                 width: 65px
                 height: 65px
-                border-radius: 50%
-                background-color: #b3adab
-                border: 1px dashed #fc7979
-                display: flex
-                justify-content: center
-                align-items: center
                 margin-top: 0px
                 margin: 20px auto
                 span
@@ -228,7 +213,41 @@
                 button.slick-next
                     right: -40px
                 span.features    
-                   font-size: 28px               
+                   font-size: 28px
+
+    section.ordering
+        h3 
+            @include title
+            font-size: 30px
+        div.ordering__wrapper
+            border-radius: 13px
+            .ordering__icon
+                width: 65px
+                height: 65px
+                img
+                    width: 40px
+                    height: 40px
+            form.ordering__form
+                align-items: center
+                justify-content: space-between
+                flex-direction: column
+                input
+                    width: 70%
+                    margin-bottom: 35px
+                    font-size: 17px
+                .text_field
+                    width: 70%
+                    margin: 0px
+                    font-size: 17px
+                .btn.btn-form
+                    margin-top: 35px
+                    width: 50%
+                    font-size: 17px
+                    
+    div.modal
+        div.modal__window
+            width: 50%                    
+
                                
 // для мобильных девайсов sm
 
@@ -249,14 +268,13 @@
             justify-content: space-around
             position: fixed
             top: 10px
-            left: 10px
+            left: -100%
             background-color: rgba(0, 0, 0, .75)
             width: 45%
             height: 65vh
             transition: 1s all
-            z-index: 2
             &_active
-                left: -100%
+                left: 10px
             a.menu__link
                 font-size: 16px
                 margin-bottom: 10px
@@ -264,7 +282,6 @@
         div.header__burger
             display: block
             position: fixed
-            z-index: 2
             top: 15px
             right: 15px
             height: 21px
@@ -307,12 +324,6 @@
             div.description__block__icon
                 width: 75px
                 height: 75px
-                border-radius: 50%
-                background-color: #b3adab
-                border: 1px dashed #fc7979
-                display: flex
-                justify-content: center
-                align-items: center
                 margin-top: 0px
                 margin: 0 auto
                 span
@@ -344,7 +355,41 @@
                 button.slick-next
                     right: -30px
                 span.features    
-                   font-size: 24px                 
+                   font-size: 24px
+
+    section.ordering
+        h3 
+            @include title
+            font-size: 24px
+        div.ordering__wrapper
+            border-radius: 13px
+            .ordering__icon
+                width: 65px
+                height: 65px
+                img
+                    width: 45px
+                    height: 45px
+            form.ordering__form
+                align-items: center
+                justify-content: space-between
+                flex-direction: column
+                input
+                    width: 85%
+                    margin-bottom: 26px
+                    font-size: 17px
+                .text_field
+                    width: 85%
+                    margin: 0px
+                    font-size: 17px
+                .btn.btn-form
+                    margin-top: 26px
+                    width: 65%
+                    font-size: 17px
+
+    div.modal
+        div.modal__window
+            width: 80%
+                                                           
 
 // для мобильных девайсов xs
 
@@ -443,6 +488,52 @@
                 button.slick-next
                     right: -25px
                 span.features    
-                   font-size: 24px                                                         
-                        
+                   font-size: 24px
 
+    section.ordering
+        h3 
+            @include title
+            font-size: 20px
+        div.ordering__wrapper
+            border-radius: 13px
+            .ordering__icon
+                width: 55px
+                height: 55px
+                img
+                    width: 35px
+                    height: 35px
+            form.ordering__form
+                align-items: center
+                justify-content: space-between
+                flex-direction: column
+                input
+                    width: 85%
+                    margin-bottom: 26px
+                    font-size: 15px
+                .text_field
+                    width: 85%
+                    margin: 0px
+                    font-size: 15px
+                .btn.btn-form
+                    margin-top: 26px
+                    width: 65%
+                    font-size: 15px
+
+    div.modal
+        div.modal__window
+            .exit
+                
+                right: -20px
+                top: -30px
+            &__title
+                h3
+                    font-size: 17px
+            .ordering__form_2
+                input
+                    font-size: 13px
+                .text_field
+                    font-size: 13px
+                .btn.btn-form
+                    width: 65%
+                    font-size: 13px
+                     

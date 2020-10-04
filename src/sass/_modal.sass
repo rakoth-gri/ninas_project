@@ -1,0 +1,62 @@
+.modal
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0px
+    background: rgba(0, 0, 0, 0.85)
+    &__window
+        padding: 25px 0
+        position: absolute
+        top: 30%
+        background-color: #b3adab
+        left: 50%
+        transform: translateX(-50%)
+        width: 30%
+        height: auto
+        border-radius: 15px
+        .exit
+            position: absolute
+            right: -30px
+            top: -30px
+            font-size: 40px
+            color: $head-color
+            cursor: pointer
+        &__title
+            margin-bottom: 20px
+            h3
+                text-align: center
+                color: #000
+        .ordering__form_2
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            input
+                @include form_element
+                width: 65%
+                background-color: #b3adab
+                margin-bottom: 30px
+                &:focus
+                    border-bottom: 2px solid #fc7979 
+            .text_field
+                @include form_element
+                width: 65%
+                background-color: #b3adab
+                margin-bottom: 30px
+                &:focus
+                    border-bottom: 2px solid #fc7979
+            .btn.btn-form
+                width: 50%
+                background-color: #d95252
+                transition: 0.3s all
+                &:hover
+                    background-color: #e5dfdc
+                    border: 1px dashed #d95252
+                    color: #d95252
+                    font-size: 19px
+
+#modal_box,  #order
+    display: none
+
+
+         
