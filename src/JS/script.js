@@ -11,4 +11,13 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next"> <span class="icon-arrow-right2 features"></span> </button>'
     });
 
+    $('html, body').animate({ scrollTop: 0 });
+
+    const buter = document.querySelector (".menu");
+    const kingburger = document.querySelector (".header__burger");
+    
+    kingburger.onclick = function () {
+        buter.classList.toggle("menu_active") 
+    };
+        
 });
