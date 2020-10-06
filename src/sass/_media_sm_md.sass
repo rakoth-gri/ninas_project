@@ -24,14 +24,18 @@
     div.slider
         margin-top: 20px
         div.row
-            width: 95%
+            width: 100%
             margin: 0 auto
             div.slider__content__wrapper
                 position: relative
                 button.slick-prev
-                    left: -50px
+                    top: 7%
+                    transform: translateY(-50%)
+                    left: 20px
                 button.slick-next
-                    right: -50px
+                    top: 7%
+                    transform: translateY(-50%)
+                    right: 20px
                        
               
 // для  девайсов col-lg и больше
@@ -78,6 +82,7 @@
                         text-align: center
                 div.block__desc
                     font-size: 15px
+                    font-weight: 300
             div.description__block__icon
                 width: 65px
                 height: 65px
@@ -89,16 +94,27 @@
     div.slider
         margin-top: 20px
         div.row
-            width: 95%
+            width: 100%
             margin: 0 auto
             div.slider__content__wrapper
-                position: relative
+                .slider__content__block
+                    align-items: flex-start
+                    position: relative
+                    .slider__content__desc
+                        div.desc
+                            font-weight: 300
                 button.slick-prev
-                    left: -45px
+                    top: 5%
+                    transform: translateY(-50%)
+                    left: 15px
+                    span.features    
+                        font-size: 32px
                 button.slick-next
-                    right: -45px
-                span.features    
-                   font-size: 32px
+                    top: 5%
+                    transform: translateY(-50%)
+                    right: 15px
+                    span.features    
+                        font-size: 32px
 
     div.modal
         div.modal__window
@@ -113,7 +129,7 @@
         .bg_header
             height: 450px
         div.row
-            padding-top: 45px
+            padding-top: 40px
         .header__title
             margin-top: 30px 
             h1
@@ -139,6 +155,17 @@
                 font-size: 20px
                 margin-bottom: 27px
                 border-right: none
+        div.header__callback
+            flex-direction: row
+            align-items: center
+            justify-content: space-around
+            .header__callback__link
+                margin-top: 0px
+                font-size: 20px
+                font-weight: 700
+            .header__callback__desc
+                font-size: 20px
+                font-weight: 700           
         div.header__burger
             display: block
             position: fixed
@@ -163,6 +190,7 @@
         //             transform: rotate(-45deg)
 
     .description
+        padding-top: 25px 0
         &__subtitle
             margin-bottom: 15px 
             h2
@@ -180,7 +208,8 @@
                         font-size: 20px
                         text-align: center
                 div.block__desc
-                    margin-top: 6px        
+                    margin-top: 6px
+                    font-weight: 300     
             div.description__block__icon
                 width: 65px
                 height: 65px
@@ -190,59 +219,67 @@
                     font-size: 40px
 
     div.slider
-        margin-top: 20px
         div.row
-            width: 95%
+            padding-top: 10px
+            width: 100%
             margin: 0 auto
             div.slider__content__wrapper
                 position: relative
                 div.slider__content__block
-                    border-radius: 13px
                     flex-direction: column
                     img
                         width: 100%
-                        border-radius: 13px
                         margin: 0px
                     .slider__content__desc
                         width: 100%
                         h3
                             font-size: 20px
                             text-align: center
+                        .desc
+                            font-weight: 300
+                            padding: 10px    
                 button.slick-prev
-                    left: -40px
+                    left: 10px
+                    top: 25%
+                    transform: translateY(-50%)
                 button.slick-next
-                    right: -40px
+                    right: 10px
+                    top: 25%
+                    transform: translateY(-50%)
                 span.features    
-                   font-size: 28px
+                   font-size: 35px
 
     section.ordering
         h3 
             @include title
             font-size: 30px
-        div.ordering__wrapper
-            border-radius: 13px
-            .ordering__icon
-                width: 65px
-                height: 65px
-                img
-                    width: 40px
-                    height: 40px
-            form.ordering__form
-                align-items: center
-                justify-content: space-between
-                flex-direction: column
-                input
-                    width: 70%
-                    margin-bottom: 35px
-                    font-size: 17px
-                .text_field
-                    width: 70%
-                    margin: 0px
-                    font-size: 17px
-                .btn.btn-form
-                    margin-top: 35px
-                    width: 50%
-                    font-size: 17px
+        .container
+            div.ordering__wrapper
+                border-radius: 13px
+                .ordering__icon
+                    width: 65px
+                    height: 65px
+                    img
+                        width: 40px
+                        height: 40px
+                form.ordering__form
+                    align-items: center
+                    justify-content: space-between
+                    flex-direction: column
+                    input
+                        width: 70%
+                        margin-bottom: 30px
+                        font-size: 17px
+                        font-weight: 300
+                    .text_field
+                        width: 70%
+                        margin-top: 0px
+                        font-size: 17px
+                        font-weight: 300
+                    .btn.btn-form
+                        margin-top: 30px
+                        width: 50%
+                        font-size: 17px
                     
     div.modal
         div.modal__window
@@ -257,9 +294,9 @@
         .bg_header
             height: 550px
         div.row
-            padding-top: 45px
+            padding-top: 40px
         .header__title h1
-            font-size: 45px 
+            font-size: 32px 
         .header__subtitle h2
             font-size: 26px          
         nav.menu
@@ -279,6 +316,17 @@
                 font-size: 16px
                 margin-bottom: 10px
                 border-right: none
+        div.header__callback
+            flex-direction: row
+            align-items: center
+            justify-content: space-around
+            .header__callback__link
+                margin-top: 0px
+                font-size: 15px
+                font-weight: 500
+            .header__callback__desc
+                font-size: 15px
+                font-weight: 500           
         div.header__burger
             display: block
             position: fixed
@@ -303,15 +351,22 @@
         //             transform: rotate(-45deg)
         .header__callback
             padding: 0px            
-            .header__callback__desc
-                font-size: 14px
-                text-align: left 
-            .header__callback__link
-                font-size: 12px
+            div.header__callback__desc
+                font-size: 18px
+                text-align: center 
+            a.header__callback__link
+                font-size: 18px
                 font-weight: 500
-                text-align: left
+                text-align: center
+        .header__btn
+            padding: 0px
+            align-items: flex-start    
+            .btn.btn-callback
+                height: 30px        
+                
 
-    .description
+    section.description
+        padding: 25px 0
         &__subtitle h2
             font-size: 26px
         .description__block
@@ -321,6 +376,7 @@
                     font-size: 18px
                 div.block__desc
                     font-size: 15px
+                    font-weight: 300
             div.description__block__icon
                 width: 75px
                 height: 75px
@@ -330,10 +386,8 @@
                     font-size: 45px        
 
     div.slider
-        margin-top: 20px
         div.row
-            width: 95%
-            margin: 0 auto
+            padding-top: 45px
             div.slider__content__wrapper
                 position: relative
                 div.slider__content__block
@@ -341,7 +395,6 @@
                     border-radius: 10px
                     img
                         width: 100%
-                        border-radius: 10px
                         margin: 0px
                     .slider__content__desc
                         width: 100%
@@ -349,42 +402,49 @@
                             font-size: 18px
                             text-align: center
                         .desc
-                            font-size: 15px  
+                            font-size: 15px
+                            font-weight: 300
+                            padding: 8px  
                 button.slick-prev
-                    left: -30px
+                    left: 10px
+                    top: 25%
+                    transform: translateY(-50%)
                 button.slick-next
-                    right: -30px
+                    right: 10px
+                    top: 25%
+                    transform: translateY(-50%)
                 span.features    
-                   font-size: 24px
+                   font-size: 29px
 
     section.ordering
         h3 
             @include title
             font-size: 24px
-        div.ordering__wrapper
-            border-radius: 13px
-            .ordering__icon
-                width: 65px
-                height: 65px
-                img
-                    width: 45px
-                    height: 45px
-            form.ordering__form
-                align-items: center
-                justify-content: space-between
-                flex-direction: column
-                input
-                    width: 85%
-                    margin-bottom: 26px
-                    font-size: 17px
-                .text_field
-                    width: 85%
-                    margin: 0px
-                    font-size: 17px
-                .btn.btn-form
-                    margin-top: 26px
-                    width: 65%
-                    font-size: 17px
+        .container    
+            div.ordering__wrapper
+                border-radius: 13px
+                .ordering__icon
+                    width: 65px
+                    height: 65px
+                    img
+                        width: 45px
+                        height: 45px
+                form.ordering__form
+                    align-items: center
+                    justify-content: space-between
+                    flex-direction: column
+                    input
+                        width: 85%
+                        margin-bottom: 26px
+                        font-size: 17px
+                    .text_field
+                        width: 85%
+                        margin-top: 0px
+                        font-size: 17px
+                    .btn.btn-form
+                        margin-top: 26px
+                        width: 65%
+                        font-size: 17px
 
     div.modal
         div.modal__window
@@ -400,7 +460,7 @@
         .bg_header
             height: 350px
         div.row
-            padding-top: 45px
+            padding-top: 35px
         .header__title h1
             font-size: 45px 
         .header__subtitle h2
@@ -419,20 +479,24 @@
             right: 10px
             height: 21px
             width: 25px
-        .header__callback    
-            .header__callback__desc
-                font-size: 12px
+        div.header__callback
+            flex-direction: column    
+            div.header__callback__desc
+                font-size: 15px
                 text-align: center
-            .header__callback__link
-                font-size: 12px
+                font-weight: 700
+            a.header__callback__link
+                font-size: 15px
                 font-weight: 700
                 text-align: center
                 padding: 0px
+                text-decoration: underline
         .header__btn
             padding: 0px
             align-items: flex-start    
             .btn.btn-callback
                 font-size: 11px
+                height: 30px
         .header__title
             margin-top: 30px
             h1
@@ -460,12 +524,10 @@
                     h3
                         font-size: 17px
                         text-align: center
-            
 
     div.slider
-        margin-top: 20px
         div.row
-            width: 90%
+            width: 100%
             margin: 0 auto
             div.slider__content__wrapper
                 position: relative
@@ -474,7 +536,7 @@
                     border-radius: 7px
                     img
                         width: 100%
-                        border-radius: 7px
+                        border-radius: 8px
                         margin: 0px
                     .slider__content__desc
                         width: 100%
@@ -482,11 +544,16 @@
                             font-size: 17px
                             text-align: center
                         .desc
-                            font-size: 14px    
+                            font-size: 15px
+                            padding: 5px    
                 button.slick-prev
-                    left: -25px
+                    left: 5px
+                    top: 25%
+                    transform: translateY(-50%)
                 button.slick-next
-                    right: -25px
+                    right: 5px
+                    top: 25%
+                    transform: translateY(-50%)
                 span.features    
                    font-size: 24px
 
@@ -522,7 +589,6 @@
     div.modal
         div.modal__window
             .exit
-                
                 right: -20px
                 top: -30px
             &__title

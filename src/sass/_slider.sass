@@ -1,49 +1,70 @@
-.slider
-    .slider__content__wrapper
-        position: relative
+div.slider
+    margin-top: 0px
+    .container
         padding: 0px
-        button.slick-prev
-            outline: none
-            border: none
-            position: absolute
-            left: -70px
-            top: 50%
-            transform: translateY(-100%)
-        button.slick-next
-            outline: none
-            border: none
-            position: absolute
-            right: -70px
-            top: 50%
-            transform: translateY(-100%)    
-        div.slider__content__block
-            display: flex
-            justify-content: space-around
-            align-items: center
-            background-color: #e5dfdc
-            border-radius: 20px
-            
-            height: auto
-            img
-                display: block
-                width: 48%
-                margin: 7px 0px
-                border-radius: 15px
-            .slider__content__desc
-                width: 48%
-                .desc
-                    font-size: 17px
-                    width: 100%
-                    text-align: justify
-                    color: #2e2e2e
-                    word-spacing: 1px
-                    font-weight: 400
-                    &:first-letter
-                        font-size: 23px
-                        color: #ec644b
-                h3
-                    @include h3
+        .slider__content__wrapper
+            position: relative
+            padding: 0px
+            button.slick-prev
+                outline: none
+                border: none
+                position: absolute
+                left: -70px
+                top: 50%
+                transform: translateY(-100%)
+                background-color: transparent
+                z-index: 1
+                span
+                    &:hover
+                        color: #ff0303
+            button.slick-next
+                outline: none
+                border: none
+                position: absolute
+                right: -70px
+                top: 50%
+                transform: translateY(-100%)
+                background-color: transparent
+                z-index: 1
+                span
+                    &:hover
+                        color: #ff0303
+            div.slider__content__block
+                display: flex
+                justify-content: space-around
+                align-items: center
+                background-color: #e5dfdc
+                border-radius: 10px            
+                height: auto
+                img
                     display: block
-                    margin-bottom: 5px
-                    text-align: left
-                    margin-top: 10px     
+                    width: 48%
+                    margin: 5px 0px
+                    border-radius: 10px
+                div.slider__content__desc
+                    width: 48%
+                    padding: 5px
+                    .desc
+                        font-size: 17px
+                        width: 100%
+                        text-align: justify
+                        color: #2e2e2e
+                        word-spacing: 1px
+                        font-weight: 300
+                        &:first-letter
+                            font-size: 23px
+                            color: #ec644b
+                    h3
+                        @include h3
+                        display: block
+                        margin-bottom: 5px
+                        text-align: left
+                        margin-top: 10px
+        div.slider__title
+            width: 100% 
+            h3            
+                @include title
+                font-size: 28px
+                display: block
+                text-align: center
+                margin-bottom: 25px                     
