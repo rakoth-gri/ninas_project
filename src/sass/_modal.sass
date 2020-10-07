@@ -1,10 +1,15 @@
 .modal
+    display: none
     position: fixed
     width: 100%
     height: 100%
     top: 0px
     background: rgba(0, 0, 0, 0.85)
+    transition: 1s all
+    &_active
+        display: block
     &__window
+        display: none
         padding: 25px 0
         position: absolute
         top: 30%
@@ -14,6 +19,9 @@
         width: 30%
         height: auto
         border-radius: 15px
+        transition: 1s all
+        &_active
+            display: block
         .exit
             position: absolute
             right: -30px
@@ -55,8 +63,7 @@
                     color: #d95252
                     font-size: 19px
 
-#modal_box,  #order
-    display: none
+
 
 
          

@@ -133,6 +133,34 @@
             height: 450px
         div.row
             padding-top: 40px
+            .menu
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                position: fixed
+                top: 10px
+                left: -100%
+                background-color: rgba(0, 0, 0, .90)
+                width: 45%
+                height: 65vh
+                transition: 1s all
+                &_active
+                    left: 10px
+                a.menu__link
+                    font-size: 20px
+                    margin-bottom: 25px
+                    border-right: none
+            div.header__callback
+                flex-direction: row
+                align-items: center
+                justify-content: space-around
+                .header__callback__link
+                    margin-top: 0px
+                    font-size: 20px
+                    font-weight: 700
+                .header__callback__desc
+                    font-size: 20px
+                    font-weight: 700
         .header__title
             margin-top: 30px 
             h1
@@ -140,35 +168,7 @@
         .header__subtitle
             margin-top: 25px  
             h2
-                font-size: 30px          
-        .menu
-            flex-direction: column
-            align-items: center
-            justify-content: center
-            position: fixed
-            top: 10px
-            left: -100%
-            background-color: rgba(0, 0, 0, .90)
-            width: 45%
-            height: 65vh
-            transition: 1s all
-            &_active
-                left: 10px
-            a.menu__link
-                font-size: 20px
-                margin-bottom: 27px
-                border-right: none
-        div.header__callback
-            flex-direction: row
-            align-items: center
-            justify-content: space-around
-            .header__callback__link
-                margin-top: 0px
-                font-size: 20px
-                font-weight: 700
-            .header__callback__desc
-                font-size: 20px
-                font-weight: 700           
+                font-size: 30px                      
         div.header__burger
             display: block
             position: fixed
@@ -299,40 +299,40 @@
         height: 550px
         .bg_header
             height: 550px
-        div.row
-            padding-top: 40px
         .header__title h1
             font-size: 32px 
         .header__subtitle h2
-            font-size: 26px          
-        nav.menu
-            flex-direction: column
-            align-items: center
-            justify-content: space-around
-            position: fixed
-            top: 10px
-            left: -100%
-            background-color: rgba(0, 0, 0, .75)
-            width: 45%
-            height: 65vh
-            transition: 1s all
-            &_active
-                left: 10px
-            a.menu__link
-                font-size: 16px
-                margin-bottom: 10px
-                border-right: none
-        div.header__callback
-            flex-direction: row
-            align-items: center
-            justify-content: space-around
-            .header__callback__link
-                margin-top: 0px
-                font-size: 15px
-                font-weight: 500
-            .header__callback__desc
-                font-size: 15px
-                font-weight: 500           
+            font-size: 26px     
+        div.row
+            padding-top: 40px
+            nav.menu
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                position: fixed
+                top: 10px
+                left: -100%
+                background-color: rgba(0, 0, 0, .75)
+                width: 55%
+                height: 65vh
+                transition: 1s all
+                &_active
+                    left: 10px
+                .menu__link
+                    font-size: 19px
+                    margin-bottom: 25px
+                    border-right: none
+            div.header__callback
+                flex-direction: row
+                align-items: center
+                justify-content: space-around
+                .header__callback__link
+                    margin-top: 0px
+                    font-size: 15px
+                    font-weight: 500
+                .header__callback__desc
+                    font-size: 15px
+                    font-weight: 500           
         div.header__burger
             display: block
             position: fixed
@@ -468,42 +468,41 @@
             height: 350px
         div.row
             padding-top: 35px
-        .header__title h1
-            font-size: 45px 
-        .header__subtitle h2
-            font-size: 26px          
-        nav.menu
-            justify-content: center
-            height: 40vh
-            a.menu__link
-                font-size: 11px
-                margin-bottom: 20px
-                border-right: none
-        div.header__burger
-            display: block
-            position: fixed
-            top: 10px
-            right: 10px
-            height: 21px
-            width: 25px
-        div.header__callback
-            flex-direction: column    
-            div.header__callback__desc
-                font-size: 15px
-                text-align: center
-                font-weight: 700
-            a.header__callback__link
-                font-size: 15px
-                font-weight: 700
-                text-align: center
+            nav.menu
+                justify-content: center
+                height: 50
+                
+                vh
+                width: 60%
+                a.menu__link
+                    font-size: 15px
+                    margin-bottom: 20px
+                    border-right: none
+            div.header__burger
+                display: block
+                position: fixed
+                top: 10px
+                right: 10px
+                height: 21px
+                width: 25px
+            div.header__callback
+                flex-direction: column    
+                div.header__callback__desc
+                    font-size: 15px
+                    text-align: center
+                    font-weight: 700
+                a.header__callback__link
+                    font-size: 15px
+                    font-weight: 700
+                    text-align: center
+                    padding: 0px
+                    text-decoration: underline
+            .header__btn
                 padding: 0px
-                text-decoration: underline
-        .header__btn
-            padding: 0px
-            align-items: flex-start    
-            .btn.btn-callback
-                font-size: 11px
-                height: 30px
+                align-items: flex-start    
+                .btn.btn-callback
+                    font-size: 11px
+                    height: 30px
         .header__title
             margin-top: 30px
             h1
