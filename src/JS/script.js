@@ -44,7 +44,7 @@ $(document).ready(function(){
     const button_form = document.querySelector(".btn.btn-callback")
     const closeBtn = document.querySelector(".exit")
 
-    button_form.onclick = function() {
+    button_form.addEventListener('click', function() {
 
         window_body.classList.add('modal_active');
 
@@ -58,6 +58,6 @@ $(document).ready(function(){
             window_form.classList.remove('modal__window_active');
         }
 
-    };
+    });
         
 });
