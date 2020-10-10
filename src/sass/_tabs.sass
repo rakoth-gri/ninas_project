@@ -1,0 +1,72 @@
+.tabloids
+    height: auto
+    padding-bottom: 25px
+    &__title
+        text-align: center
+    &__tabs
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 25px
+        &__item
+            margin: 0 25px
+            width: 20%
+            background-color: $bg_color
+            height: 60px
+            text-align: center
+            font-size: 17px
+            // выравние текста по вертикали
+            line-height: 60px
+            border-radius: 7px
+            border: 2px solid $head-color
+            font-weight: 300
+            text-transform: uppercase
+            &_active
+                transition: 0.5s all
+                color: #ffffff
+                background-color: $head-color 
+                border: 2px solid #2e2e2e
+                box-shadow: 4px -4px 8px #eb4a26 
+                transform: skewX(-10deg)
+                font-size: 18px            
+    div.tabloids__tabscontent
+        height: auto
+        margin-top: 25px
+        background-color: $bg_color
+        border-radius: 10px
+        position: relative
+        .tabscontent__wrapper
+            position: absolute
+            left: 35px
+            top: 35px
+            display: flex
+            justify-content: space-between
+            opacity: 0
+            background-color: $bg_color
+            border-radius: 10px                     
+            div.tabscontent__img
+                width: 100%
+                margin: 0px
+                img
+                    width: 100%
+                    padding: 10px
+            .tabscontent__desc
+                width: 100%
+                padding: 10px
+                p
+                    text-align: justify
+                    font-size: 17px
+                    color: #2e2e2e
+                    font-weight: 300
+            &_active
+                transition: 0.5s all
+                opacity: 1
+                left: 0px
+                top: 0px
+                position: static
+// position: absolute для наших 4-х ".tabscontent__wrapper" требуется чтобы выстроить их колодой, но за счет opacity = 0 их не видно
+// в неактивном состоянии, а  в активном opacity: 1. В активном нужно обратно перевести ".tabscontent__wrapper" в position: static (обычное состояние)
+//  чтобы верстать дальнейшие секции "без разрыва"
+    .container
+        padding: 0px             
+                            

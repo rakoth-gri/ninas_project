@@ -46,18 +46,20 @@
         .bg_header
             height: 450px
         div.container
-            padding-left: 3px
+            padding: 0px
             nav.menu
+                padding-left: 12px
                 a.menu__link
                     text-decoration: none
                     display: block
-                    border-right: none
                     padding-right: 0px
-                    font-size: 14px
+                    font-size: 16.5px
                     text-transform: uppercase
                     transition: 1s all
-                    color: $head-color
-                    border-right: 1px solid #000
+                    border: none
+                    margin-right: 3px
+                    &:hover
+                        color: $text-color
             .header__callback__desc
                 font-size: 15px
             .header__callback__link
@@ -289,7 +291,56 @@
                     
     div.modal
         div.modal__window
-            width: 50%                    
+            width: 50%
+
+    .tabloids
+        .tabloids__tabs
+            align-items: center
+            flex-wrap: wrap
+            justify-content: center
+            &__item
+                margin: 0 10px
+                width: 45.5%
+                height: 57px
+                line-height: 57px
+                margin-bottom: 19px
+                &_active
+                    transition: 0.5s all
+                    color: #ffffff
+                    background-color: $head-color 
+                    border: 2px solid #2e2e2e
+                    box-shadow: 4px -4px 8px #eb4a26 
+                    transform: skewX(-10deg)
+                    font-size: 18px
+        div.tabloids__tabscontent            
+            margin-top: 5px
+            background-color: none
+            border-radius: 10px
+            position: relative
+            .tabscontent__wrapper
+                position: absolute
+                left: 35px
+                top: 35px
+                display: flex
+                justify-content: space-between
+                flex-direction: column
+                opacity: 0
+                background-color: $bg_color
+                border-radius: 10px
+                .tabscontent__img
+                    margin: 10px 
+                    width: 100%
+                    img
+                        width: 100%
+                        border-radius: 10px
+                .tabscontent__desc
+                    width: 100%
+                    padding: 10px
+                    p
+                        text-align: justify
+                        font-size: 17px
+                        color: #2e2e2e
+                        font-weight: 300                            
 
                                
 // для мобильных девайсов sm
@@ -448,7 +499,31 @@
     div.modal
         div.modal__window
             width: 80%
-                                                           
+
+    .tabloids
+        .tabloids__tabs
+            align-items: center
+            flex-wrap: wrap
+            justify-content: center
+            &__item
+                margin: 0 10px
+                width: 43.5%
+                height: 50px
+                line-height: 50px
+                margin-bottom: 15px
+                font-size: 15px
+                &_active                    
+                    font-size: 16px
+        div.tabloids__tabscontent            
+            .tabscontent__wrapper
+                flex-direction: column
+                margin-top: -15px
+                div.tabscontent__desc
+                    width: 100%
+                    padding: 10px
+                    p
+                        font-size: 15px                        
+                                                                                     
 
 // для мобильных девайсов xs
 
@@ -503,7 +578,7 @@
                 font-size: 20px
 
     section.description
-        .description__subtitle h2
+        .description__subtitle h3
             font-size: 20px
         div.description__block
             flex-direction: column
@@ -527,7 +602,7 @@
             margin: 0 auto
             div.slider__title
                 h3
-                    font-size: 18px
+                    font-size: 20px
             div.slider__content__wrapper
                 position: relative
                 div.slider__content__block
@@ -558,7 +633,6 @@
 
     section.ordering
         h3 
-            @include title
             font-size: 20px
         div.ordering__wrapper
             border-radius: 13px
@@ -592,7 +666,7 @@
                 top: -30px
             &__title
                 h3
-                    font-size: 17px
+                    font-size: 18px
             .ordering__form_2
                 input
                     font-size: 13px
@@ -601,4 +675,15 @@
                 .btn.btn-form
                     width: 65%
                     font-size: 13px
-                     
+
+    .tabloids
+        .tabloids__tabs__item
+                width: 78%
+                height: 40px
+                font-size: 16px
+                line-height: 40px
+                border-radius: 7px
+                border: 2px solid $head-color
+                font-weight: 300
+                text-transform: uppercase
+        

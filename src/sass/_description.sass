@@ -4,8 +4,12 @@
     height: auto
     &__subtitle
         text-align: center
+        h3 
+            @include title
+            text-align: center
+            
     &__block
-        background-color: #e5dfdc
+        background-color: $bg_color
         border-radius: 10px
         display: flex
         justify-content: space-between

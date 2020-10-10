@@ -28,11 +28,21 @@ div.slider
                 span
                     &:hover
                         color: #ff0303
+            // ul.slick-dots
+            //     margin-top: 10px
+            //     display: flex
+            //     flex-direction: row
+            //     align-items: center
+            //     justify-content: center
+            //     li
+            //         margin-right: 2px
+            //         button
+            //             visibility: hidden            
             div.slider__content__block
                 display: flex
-                justify-content: space-around
+                justify-content: space-between
                 align-items: center
-                background-color: #e5dfdc
+                background-color: $bg_color
                 border-radius: 10px            
                 height: auto
                 img
@@ -50,9 +60,11 @@ div.slider
                         color: #2e2e2e
                         word-spacing: 1px
                         font-weight: 300
+                        p
+                            font-weight: 300
                         &:first-letter
                             font-size: 23px
-                            color: #ec644b
+                            color: $head-color
                     h3
                         @include h3
                         display: block
@@ -63,7 +75,7 @@ div.slider
             width: 100% 
             h3            
                 @include title
-                font-size: 28px
+                font-size: 22px
                 display: block
                 text-align: center
                 margin-bottom: 25px                     
