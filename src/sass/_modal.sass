@@ -6,21 +6,25 @@
     top: 0px
     background: rgba(0, 0, 0, 0.85)
     transition: 0.5s all
+    overflow: auto
+    // формируется полоса прокрутки, если содержимое не влезаеть в блок .modal - то есть внутри него - длиннющее модальное окно
     &_active
         display: block
     &__window
-        display: none
+        // display: none
         padding: 25px 0
-        position: absolute
-        top: 30%
+        position: relative
+        // для того чтобы крестик .exit не пропал
         background-color: #b3adab
-        left: 50%
-        transform: translateX(-50%)
+        margin: 20% auto 0
         width: 30%
         height: auto
         border-radius: 15px
-        &_active
-            display: block
+        animation-name: scroll_down
+        animation-duration: 0.55s
+        
+        // &_active
+        //     display: block
         .exit
             position: absolute
             right: -30px
@@ -28,6 +32,10 @@
             font-size: 40px
             color: $head-color
             cursor: pointer
+            // animation-name: scroll_up
+            // animation-duration: 0.5s   
+            &:hover, &:focus
+                color: #ff0303
         &__title
             margin-bottom: 20px
             h3
@@ -62,6 +70,21 @@
                     color: #d95252
                     font-size: 19px
 
+@keyframes scroll_down
+    from 
+        top: -400px
+        opacity: 0
+    to 
+        top: 0px
+        opacity: 1            
+
+// @keyframes scroll_up
+//     from 
+//         top: 0px
+//         opacity: 1
+//     to 
+//         top: -400px
+//         opacity: 0 
 
 
 

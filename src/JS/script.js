@@ -14,8 +14,10 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next"> <span class="icon-arrow-right2 features"></span> </button>'
     });
 
+
     // $('html, body').animate({ scrollTop: 0 });
 
+    
     // код открытия/закрытия бургерного меню 
 
     const buter = document.querySelector (".menu");
@@ -28,47 +30,81 @@ $(document).ready(function(){
     // };
 
     kingburger.addEventListener('click', function() {
-            buter.classList.toggle('menu_active');
+        buter.classList.toggle('menu_active');
+        // kingburger.removeEventListener('click');
     });
 
     linkClick.forEach( function (piska) {
-        piska.addEventListener('click', function() {
+        piska.addEventListener('click', closeMenu);
+        
+        function closeMenu() {
             buter.classList.toggle('menu_active');
-        });
+            piska.removeEventListener('click', closeMenu);
+        };
     });
 
     // const features = document.querySelector(".slider")
     // features.setAttribute('id', '#sliding');
 
-    // открытие и закрытие  модального окна
 
-    const window_body = document.querySelector(".modal")
-    const window_form = document.querySelector(".modal__window")
-    const button_form = document.querySelector(".btn.btn-callback")
+    // ОТКРЫТИЕ И ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
+
+    const window = document.querySelector(".modal")
+    const button = document.querySelector(".btn.btn-callback")
     const closeBtn = document.querySelector(".exit")
 
-    button_form.addEventListener('click', function() {
+    button.addEventListener('click', function() {
 
-        window_body.classList.toggle('modal_active');
-
-        window_form.classList.toggle('modal__window_active');
-    
+        window.classList.toggle('modal_active');
         closeBtn.addEventListener('click', closingModal);
+        window.addEventListener('click', closingBywindowClick);
 
         function closingModal () {
-
-            window_body.classList.remove('modal_active');
-            window_form.classList.remove('modal__window_active');
+            window.classList.remove('modal_active');
+            closeBtn.removeEventListener('click', closingModal);
+            window.removeEventListener('click', closingBywindowClick);
         }
-
+// ниже приведен код для закрытия модалки вне ее области ( но в области остального окна с классом .modal)
+        function closingBywindowClick (event) {
+            if (event.target===window) {
+                closingModal();
+            }      
+        }
     });
+
 
     // создание табов на JQUERY
 
-    $('div.tabloids__tabs').on('click', 'div:not(.tabloids__tabs__item_active)', function() {
-        $(this)
-          .addClass('tabloids__tabs__item_active').siblings().removeClass('tabloids__tabs__item_active')
-          .closest('div.container').find('div.tabscontent__wrapper').removeClass('tabscontent__wrapper_active').eq($(this).index()).addClass('tabscontent__wrapper_active');
+    // $('div.tabloids__tabs').on('click', 'div:not(.tabloids__tabs__item_active)', function() {
+    //     $(this)
+    //       .addClass('tabloids__tabs__item_active').siblings().removeClass('tabloids__tabs__item_active')
+    //       .closest('div.container').find('div.tabscontent__wrapper').removeClass('tabscontent__wrapper_active').eq($(this).index()).addClass('tabscontent__wrapper_active');
+    // });
+
+
+    // код для создания табов вручную, без применения JQUERY FRAMEWORK
+
+    const tabloids_tabs = document.querySelectorAll(".tabloids__tabs__item");
+    const tabscontent = document.querySelectorAll(".tabscontent__wrapper");
+
+    tabloids_tabs.forEach(function(tab, index) {
+        tab.addEventListener('click', () => {
+            changetab(index);
+        });
     });
-        
+
+    function changetab(index) {
+        for (let item of tabloids_tabs) {
+            item.classList.remove("tabloids__tabs__item_active");
+        }
+        tabloids_tabs[index].classList.add("tabloids__tabs__item_active");
+
+        for (let el of tabscontent) {
+            el.classList.remove("tabscontent__wrapper_active");
+        }
+        tabscontent[index].classList.add("tabscontent__wrapper_active");
+
+        tab.removeEventListener("click", changetab(index));
+    }
+
 });

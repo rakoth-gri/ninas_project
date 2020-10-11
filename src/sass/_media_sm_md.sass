@@ -123,7 +123,10 @@
 
     div.modal
         div.modal__window
-            width: 50%                              
+            width: 50%
+
+    
+                                         
 
 // для мобильных девайсов col-md                    
 
@@ -340,7 +343,28 @@
                         text-align: justify
                         font-size: 17px
                         color: #2e2e2e
-                        font-weight: 300                            
+                        font-weight: 300
+
+    section.prices
+        height: auto
+        padding: 10px 0 25px 0
+        
+        .prices__wrapper
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            align-items: center
+            .prices__item
+                width: 100%
+                h3
+                    font-size: 18px      
+            .prices__icon
+                width: 65px
+                height: 65px
+                span
+                    font-size: 40px                    
+            .prices__desc
+                font-size: 17px                                             
 
                                
 // для мобильных девайсов sm
@@ -522,7 +546,27 @@
                     width: 100%
                     padding: 10px
                     p
-                        font-size: 15px                        
+                        font-size: 15px
+
+    section.prices
+        height: auto
+        padding: 10px 0 25px 0        
+        .prices__wrapper
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            align-items: center
+            .prices__item
+                width: 100%
+                h3
+                    font-size: 18px      
+            .prices__icon
+                width: 75px
+                height: 75px
+                span
+                    font-size: 45px                    
+            .prices__desc
+                font-size: 16px                                                            
                                                                                      
 
 // для мобильных девайсов xs
@@ -634,9 +678,9 @@
     section.ordering
         h3 
             font-size: 20px
-        div.ordering__wrapper
-            border-radius: 13px
-            .ordering__icon
+        .ordering__wrapper
+            border-radius: 10px
+            div.ordering__icon
                 width: 55px
                 height: 55px
                 img
@@ -686,4 +730,19 @@
                 border: 2px solid $head-color
                 font-weight: 300
                 text-transform: uppercase
+
+    section.prices
+        .prices__wrapper
+            .prices__item
+                width: 100%
+                h3
+                    font-size: 18px      
+            .prices__icon
+                width: 60px
+                height: 65px
+                span
+                    font-size: 37px                    
+            .prices__desc
+                font-size: 16px                                                            
+                                                   
         

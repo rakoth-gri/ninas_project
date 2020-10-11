@@ -58,13 +58,13 @@ gulp.task ('watch', function() {
 // gulp.task ('mailer', function() {
 //     return gulp.src("src/mailer/**/*")
 //         .pipe(gulp.dest('dist/mailer'));
-// });
+// }); 
 
-gulp.task ('img', function() {
-    return gulp.src("src/img/**/*")
-        .pipe(imagemin())
-        .pipe(gulp.dest('src/img'));
-});
+// gulp.task ('img', function() {
+//     return gulp.src("src/img/**/*")
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('src/img'));
+// });
 
 
 // gulp.task ('audio', function() {
@@ -72,5 +72,5 @@ gulp.task ('img', function() {
 //         .pipe(gulp.dest('dist/audio'));
 // });
 
-gulp.task('default', gulp.parallel( 'watch', 'server', 'styles', 'img'));
+gulp.task('default', gulp.parallel( 'watch', 'server', 'styles'));
 

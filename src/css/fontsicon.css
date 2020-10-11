@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fontsicon/icomoon.ttf?8784qn') format('truetype'),
-  url('../fontsicon/icomoon.svg?8784qn#icomoon') format('svg');
+  src: url('../fontsicon/icomoon.ttf?1y0wx7') format('truetype'),
+  url('../fontsicon/icomoon.svg?1y0wx7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -57,4 +57,19 @@
 .icon-vk:before {
   content: "\ea98";
 }
+.icon-monitor:before {
+  content: "\e905";
+}
+.icon-users:before {
+  content: "\e972";
+}
+.icon-list2:before {
+  content: "\e9bb";
+}
+
+/* <span class="icon-vk"></span>
+
+<span class="icon-whatsapp"></span>
+
+<span class="icon-instagram"></span> */
 
