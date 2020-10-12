@@ -34,12 +34,12 @@ $(document).ready(function(){
         // kingburger.removeEventListener('click');
     });
 
-    linkClick.forEach( function (piska) {
+    linkClick.forEach( (piska) => {
         piska.addEventListener('click', closeMenu);
         
         function closeMenu() {
             buter.classList.toggle('menu_active');
-            piska.removeEventListener('click', closeMenu);
+            // piska.removeEventListener('click', closeMenu);
         };
     });
 
