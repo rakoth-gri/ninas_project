@@ -206,7 +206,7 @@
                 <form class="ordering__form" action="URL" id="main_form">
                     <input name="yourname" placeholder="Ваше имя" type="text">
                     <input name="tel" placeholder="Ваш номер телефона" type="tel">
-                    <input name="email" placeholder="Ваш e-mail" type="email">
+                    <input name="email" placeholder="Ваш e-mail" type="email" pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,6}\.)?[a-z]{2,6}$/i>
                     <textarea name="textarea" placeholder="Ваш запрос" class="text_field"></textarea>
                     <button class="btn btn-form"> отправить заявку </button>
                 </form>
