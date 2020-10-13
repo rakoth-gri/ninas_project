@@ -16,13 +16,12 @@
         position: relative
         // для того чтобы крестик .exit не пропал
         background-color: #b3adab
-        margin: 20% auto 0
+        margin: 10% auto 0
         width: 30%
         height: auto
         border-radius: 15px
         animation-name: scroll_down
-        animation-duration: 0.55s
-        
+        animation-duration: 0.55s        
         // &_active
         //     display: block
         .exit
@@ -57,7 +56,7 @@
                 @include form_element
                 width: 65%
                 background-color: #b3adab
-                margin-bottom: 30px
+                margin-bottom: 25px
                 &:focus
                     border-bottom: 2px solid #fc7979
             .btn.btn-form
@@ -69,6 +68,15 @@
                     border: 1px dashed #d95252
                     color: #d95252
                     font-size: 19px
+            input.error
+                    color: #d95252                   
+
+            label.error 
+                color: #d95252
+                border: none
+                margin-bottom: 25px
+                &:nth-child(4)
+                    margin-top: 25px       
 
 @keyframes scroll_down
     from 

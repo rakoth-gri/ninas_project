@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,8 @@
     <meta name="Description" content="..."/>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/fontsicon.css">
-    <link rel="stylesheet" href="css/style.min.css?1">
-    <!-- добавляю к стайлу символы ?1 для оптимальной чистки кэша -->
+    <link rel="stylesheet" href="css/style.min.css?v=2.0">
+    <!-- добавляю к стайлу символы ?v=2.0 для авто чистки кэша в браузере -->
     <link rel="stylesheet" href="css/slick.css">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <nav class="col-lg-8 menu">
-                        <a href="#"class="menu__link"> Моя история </a>
+                        <a href="#" class="menu__link"> Моя история </a>
                         <a href="#" class="menu__link"> Убеждения </a>
                         <a href="#" class="menu__link"> Виды терапии </a>
                         <a href="#" class="menu__link"> Особенности </a>
@@ -203,11 +203,11 @@
                 <div class="ordering__icon">
                     <img src="img/pencil.svg" alt="ordering__icon">
                 </div>
-                <form action="" class="ordering__form" action="#" id="main_form">
-                    <input name="yourname" placeholder="Ваше имя" type="text" required>
-                    <input name="tel" placeholder="Ваш номер телефона" type="tel" required>
-                    <input name="email" placeholder="Ваш e-mail" type="email" required>
-                    <textarea name="textarea" placeholder="Ваш запрос" required class="text_field"></textarea>
+                <form class="ordering__form" action="URL" id="main_form">
+                    <input name="yourname" placeholder="Ваше имя" type="text">
+                    <input name="tel" placeholder="Ваш номер телефона" type="tel">
+                    <input name="email" placeholder="Ваш e-mail" type="email">
+                    <textarea name="textarea" placeholder="Ваш запрос" class="text_field"></textarea>
                     <button class="btn btn-form"> отправить заявку </button>
                 </form>
             </div> 
@@ -317,8 +317,8 @@
 	</section>
 
     
-    <script type="text/javascript" src="JS/jquery.min.js"></script>
-	<script type="text/javascript" src="JS/slick.min.js"></script>
+    <script src="JS/jquery.min.js"></script>
+	<script src="JS/slick.min.js"></script>
 	<script src="JS/jquery.validate.min.js"></script>
 	<script src="JS/jquery.maskedinput.min.js"></script>
     <script src="JS/script.js"></script>    

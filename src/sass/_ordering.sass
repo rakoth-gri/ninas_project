@@ -12,6 +12,7 @@ section.ordering
             margin: 0 auto 25px auto
             padding-top: 25px
             border-radius: 10px
+            height: auto
             div.ordering__icon
                 width: 75px
                 height: 75px
@@ -38,14 +39,15 @@ section.ordering
                         border-bottom: 2px solid #fc7979               
                 .text_field
                     @include form_element
-                    margin-top: 30px
+                    margin: 25px 0
                     height: auto
                     text-decoration: none
                     font-weight: 300
+                    margin-bottom: 25px
                     &:focus
                         border-bottom: 2px solid #fc7979 
                 .btn.btn-form
-                    margin-top: 30px
+                    margin-top: 25px
                     width: 30%
                     transition: 0.3s all
                     &:hover
@@ -53,9 +55,20 @@ section.ordering
                         border: 1px dashed #d95252
                         color: #d95252
                         font-size: 19px
-                        
+                        outline: none
+                input.error
+                    color: #d95252                   
 
-            
-
+                label.error 
+                    color: #d95252
+                    border: none
+                    margin-bottom: 25px
+                  
+                    
                         
+                                        
+
+                            
+
+                                        
 

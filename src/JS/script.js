@@ -107,4 +107,61 @@ $(document).ready(function(){
         tab.removeEventListener("click", changetab(index));
     }
 
+
+    function valideForms(form) {
+        
+        $(form).validate({
+            rules: {
+                yourname: {
+                required: true,
+                minlength: 2
+                },
+    
+                email: {
+                  required: true,
+                  email: true
+                },
+    
+                tel: {
+                    required: true,
+                    minlength: 11
+                },
+                
+                textarea: {
+                    required: true
+                }        
+            },
+    
+            messages: {
+                
+                yourname: {
+                    minlength: jQuery.validator.format("Вы ввели недостаточно символов"),
+                    required: "Введите Ваше имя!"
+                },
+    
+                email: {
+                    required: "Укажите адрес электронной почты!",
+                    email: "не пропустите знак @"
+                },
+    
+                tel: {
+                    required: "Проверьте корректность данных номера телефона",
+                    minlength: jQuery.validator.format("Вы ввели недостаточно цифр"),
+                },
+                
+                textarea: {
+                    required: "Кратко опишите суть Вашего запроса"
+                }    
+            }
+        });
+    };
+
+    valideForms("#main_form");
+    valideForms("#order_form form");
+
+
+    jQuery(function($){
+        $('input[name="tel"]').mask("+7 (999) 999-9999",{placeholder:" "});
+    });
+
 });

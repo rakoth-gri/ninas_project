@@ -36,6 +36,8 @@
                     top: 7%
                     transform: translateY(-50%)
                     right: 20px
+    .tabloids
+        padding-top: 35px                 
                        
               
 // для  девайсов col-lg и больше
@@ -125,6 +127,9 @@
     div.modal
         div.modal__window
             width: 50%
+
+    .tabloids
+        padding-top: 35px       
 
     
                                          
@@ -288,9 +293,9 @@
                         margin-top: 0px
                         font-size: 17px
                         font-weight: 300
-                    .btn.btn-form
-                        margin-top: 30px
-                        width: 50%
+                    button.btn.btn-form
+                        margin-top: 0px
+                        width: 43%
                         font-size: 17px
                     
     div.modal
@@ -517,13 +522,15 @@
                         margin-top: 0px
                         font-size: 17px
                     .btn.btn-form
-                        margin-top: 26px
-                        width: 65%
+                        margin-top: 0px
+                        width: 45%
                         font-size: 17px
+                        height: 50px
 
     div.modal
         div.modal__window
-            width: 80%
+            width: 70%
+            margin: 20% auto 0
 
     .tabloids
         .tabloids__tabs
@@ -675,35 +682,41 @@
                    font-size: 24px
 
     section.ordering
-        h3 
-            font-size: 20px
-        .ordering__wrapper
-            border-radius: 10px
-            div.ordering__icon
-                width: 55px
-                height: 55px
-                img
-                    width: 35px
-                    height: 35px
-            form.ordering__form
-                align-items: center
-                justify-content: space-between
-                flex-direction: column
-                input
-                    width: 85%
-                    margin-bottom: 26px
-                    font-size: 15px
-                .text_field
-                    width: 85%
-                    margin: 0px
-                    font-size: 15px
-                .btn.btn-form
-                    margin-top: 26px
-                    width: 65%
-                    font-size: 15px
+        div.container
+            h3 
+                font-size: 20px
+            div.ordering__wrapper
+                border-radius: 10px
+                div.ordering__icon
+                    width: 65px
+                    height: 65px
+                    img
+                        width: 35px
+                        height: 35px
+                form.ordering__form
+                    align-items: center
+                    justify-content: space-between
+                    flex-direction: column
+                    input
+                        width: 85%
+                        margin-bottom: 26px
+                        font-size: 15px
+                    .text_field
+                        width: 85%
+                        margin-bottom: 25px
+                        font-size: 15px
+                    .btn.btn-form
+                        width: 48%
+                        font-size: 15px
+                        height: 49px
+                    label.error 
+                        font-size: 13px
+                        text-align: center        
 
     div.modal
         div.modal__window
+            margin: 25% auto 0
+            width: 80%
             .exit
                 right: -20px
                 top: -30px
@@ -713,11 +726,15 @@
             .ordering__form_2
                 input
                     font-size: 13px
+                    margin-bottom: 25px
                 .text_field
                     font-size: 13px
                 .btn.btn-form
                     width: 65%
                     font-size: 13px
+                label.error 
+                    font-size: 13px
+                    text-align: center    
 
     .tabloids
         .tabloids__tabs__item
