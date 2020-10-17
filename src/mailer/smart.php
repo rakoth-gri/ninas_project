@@ -1,8 +1,9 @@
 <?php 
 
-$name = $_POST['firstname'];
-$mobile = $_POST['Tel'];
+$name = $_POST['yourname'];
+$mobile = $_POST['tel'];
 $email = $_POST['email'];
+$message = $_POST['textarea'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -18,23 +19,23 @@ $mail->Password = '5agu7by5';                           // Наш пароль �
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('rakoth-gri@yandex.ru', 'RAMIL_SITE');   // От кого письмо 
+$mail->setFrom('test.ninagalieva.ru');   // От кого письмо 
 $mail->addAddress('galievi.f@yandex.ru');     // Add a recipient
-// $mail->addAddress('info@example.com');               // Name is optional
+$mail->addAddress('ninas-89@mail.ru');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 //$mail->addAttachment('/var/tmp/file.tar.gz');    // Add attachments
-$mail->addAttachment('../img/Inspiration.jpg', 'Our dude.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+$mail->addAttachment('../img/1.jpg', 'NINA_GALIEVA.jpg');    // Optional name
+$mail->isHTML(true);      // Set email format to HTML
 
-$mail->Subject = 'Автоматическая рассылка почты от пацанов из Челябинска';
+$mail->Subject = 'Автоматическая обработка заявки на сайте test.ninagalieva.ru';
 $mail->Body    = '
-	Ебануть этот скрипт нас вдохновил этот нигер-пацанчик из Америки. <br>
-	Мы рады что в Пиндостане, есть нормальные Пацанята, а не только Гомики и чертафаны!!! <br>
+	Поступила заявка на сайте test.ninagalieva.ru <br>
 	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $mobile . '<br>
-	E-mail: ' . $email . '';
+	Номер телефона: ' . $mobile . ' <br>
+	E-mail: ' . $email . ' <br>
+	Message: ' . $message . '';
 
 if(!$mail->send()) {
     return false;

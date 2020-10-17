@@ -15,6 +15,7 @@
 <body>
     <header>
         <div class="container">
+            <!-- <img src="img/2.jpg" class="bg_header" alt="bg_header" loading="lazy"> -->
             <div class="row">
                 <nav class="col-lg-8 menu">
                         <a href="#" class="menu__link"> Моя история </a>
@@ -40,8 +41,9 @@
             <span class="burger"></span>
             <span class="burger"></span>
         </div>
-        <img src="img/bg_header.jpg" class="bg_header" alt="bg_header" loading="lazy">
+        <!-- <img src="img/2.jpg" class="bg_header" alt="bg_header" loading="lazy"> -->
     </header>
+
     <section class="description">
         <div class="container">
             <div class="description__subtitle"><h3> Особенности терапии </h3></div>
@@ -206,7 +208,7 @@
                 <form class="ordering__form" action="URL" id="main_form">
                     <input name="yourname" placeholder="Ваше имя" type="text">
                     <input name="tel" placeholder="Ваш номер телефона" type="tel">
-                    <input name="email" placeholder="Ваш e-mail" type="email" pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,6}\.)?[a-z]{2,6}$/i>
+                    <input name="email" placeholder="Ваш e-mail" type="email">
                     <textarea name="textarea" placeholder="Ваш запрос" class="text_field"></textarea>
                     <button class="btn btn-form"> отправить заявку </button>
                 </form>
@@ -221,12 +223,22 @@
                 <h3> заявка на консультацию </h3>
             </div>
             <form class="ordering__form_2" action="#">
-                <input name="yourname" placeholder="Введите имя" type="text" required>
-                    <input name="tel" placeholder="Ваш телефон" type="tel" required>
-                    <input name="email" placeholder="Ваш e-mail" type="email" required>
-                    <textarea name="textarea" placeholder="Тема обращения" required class="text_field"></textarea>
+                <input name="yourname" placeholder="Введите имя" type="text">
+                    <input name="tel" placeholder="Ваш телефон" type="tel">
+                    <input name="email" placeholder="Ваш e-mail" type="email">
+                    <textarea name="textarea" placeholder="Тема обращения" class="text_field"></textarea>
                     <button class="btn btn-form"> отправить заявку</button>
             </form>
+        </div>    
+    </div>
+
+    <div class="modal_thanks" id="thanks_form">
+        <div class="modal_thanks_window">
+            <div class="exit"> &times; </div>
+            <div class="modal_thanks_title"> 
+                Спасибо за Ваше обращение! <br>
+                Мы обязательно Вам ответим!
+            </div>
         </div>    
     </div>
 
@@ -314,8 +326,26 @@
 				</div>
 			</div>
 		</div>		
-	</section>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="title"><h3> Контакты </h3></div>
 
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac3c9ce9d26cbe83d8352f7ae9a3e38e634aa955019d79a6c519fbea3e4338cf6&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
+
+            <div class="footer__info">
+                <address> Казань,  ул. Татарстан, д. 22 офис 401 </address>
+                <a class="footer__info__tel" href="tel:+79196353530"> Мобильный: 8 (919) 635-35-30 </a>
+                <div class="footer__info__social">
+                    <div class="icon"><a href="https://www.instagram.com/y_vas_budet_rebenok/"><span class="icon-instagram social"></span></a></div> 
+                    <div class="icon"><a href="https://vk.com/id489077887"><span class="icon-vk social"></span></a></div>															
+                    <div class="icon"><a href="tel:+79196353530"><span class="icon-whatsapp social"></span></a></div>
+                    <div class="icon"><a href="mailto:psy.nina.galieva@gmail.com?subject=Запись на психологическую консультацию"><span class="icon-mail social"></span></a></div>								 					
+                </div>
+            </div>	
+        </div>
+    </footer>
     
     <script src="JS/jquery.min.js"></script>
 	<script src="JS/slick.min.js"></script>

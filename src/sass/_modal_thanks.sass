@@ -1,0 +1,51 @@
+.modal_thanks
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0px
+    background: rgba(0, 0, 0, 0.85)
+    transition: 0.7s all
+    overflow: auto
+    // формируется полоса прокрутки, если содержимое не влезаеть в блок .modal - то есть внутри него - длиннющее модальное окно
+    &_active
+        display: block
+    &_window
+        // display: none
+        padding: 25px 0
+        position: relative
+        // для того чтобы крестик .exit не пропал
+        background-color: #b3adab
+        margin: 10% auto 0
+        width: 30%
+        height: auto
+        border-radius: 15px
+        animation-name: scroll_down
+        animation-duration: 0.55s        
+        // &_active
+        //     display: block
+        .exit
+            position: absolute
+            right: -30px
+            top: -30px
+            font-size: 40px
+            color: $head-color
+            cursor: pointer
+            // animation-name: scroll_up
+            // animation-duration: 0.5s   
+            &:hover, &:focus
+                color: #ff0303
+    &_title
+        text-align: center
+        text-transform: uppercase
+        font-size: 20px
+        color: $head-color
+              
+
+@keyframes scroll_down
+    from 
+        top: -400px
+        opacity: 0
+    to 
+        top: 0px
+        opacity: 1            

@@ -15,7 +15,9 @@ $(document).ready(function(){
     });
 
 
-    // $('html, body').animate({ scrollTop: 0 });
+    // открытие сайта с самого верха
+
+    $('html, body').animate({ scrollTop: 0 });
 
     
     // код открытия/закрытия бургерного меню 
@@ -164,4 +166,28 @@ $(document).ready(function(){
         $('input[name="tel"]').mask("+7 (999) 999-9999",{placeholder:" "});
     });
 
+
+
+    $('.exit').on('click', function() {
+        $('#thanks_form').fadeOut('slow'); 
+    });
+
+
+// отправка по электронной почте: технология ajax. + php.mailer
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax ({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $(this).find("textarea").val("");
+            $('.modal').fadeOut();
+            $('.modal_thanks').toggleClass('modal_thanks_active');
+            $("form").trigger('reset');
+        });
+        return false;
+    });
 });
