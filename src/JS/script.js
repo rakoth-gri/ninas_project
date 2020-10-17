@@ -169,7 +169,7 @@ $(document).ready(function(){
 
 
     $('.exit').on('click', function() {
-        $('#thanks_form').fadeOut('slow'); 
+        $('#thanks_form').fadeOut(200); 
     });
 
 
@@ -179,15 +179,16 @@ $(document).ready(function(){
         e.preventDefault();
         $.ajax ({
             type: "POST",
-            url: "mailer/smart.php",
+            url: "mailer/mail.php",
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
             $(this).find("textarea").val("");
             $('.modal').fadeOut();
-            $('.modal_thanks').toggleClass('modal_thanks_active');
+            $('.modal_thanks').fadeIn();
             $("form").trigger('reset');
         });
         return false;
     });
 });
+
