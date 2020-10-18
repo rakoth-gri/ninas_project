@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fontsicon/icomoon.ttf?1y0wx7') format('truetype'),
-  url('../fontsicon/icomoon.svg?1y0wx7#icomoon') format('svg');
+  src: url('../fontsicon/icomoon.svg?qd46xb#icomoon') format('svg'),
+  url('../fontsicon/icomoon.ttf?qd46xb') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -67,9 +67,9 @@
   content: "\e9bb";
 }
 
-/* <span class="icon-vk"></span>
+.icon-circle-up:before {
+  content: "\ea41";
+}
 
-<span class="icon-whatsapp"></span>
 
-<span class="icon-instagram"></span> */
 

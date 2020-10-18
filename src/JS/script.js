@@ -1,5 +1,4 @@
 // добавление слайдера на Jquery 
-
 $(document).ready(function(){
 
     $('.slider__content__wrapper').slick({
@@ -181,7 +180,7 @@ $(document).ready(function(){
             type: "POST",
             url: "mailer/mail.php",
             data: $(this).serialize()
-        }).done(function() {
+            }).done(function() {
             $(this).find("input").val("");
             $(this).find("textarea").val("");
             $('.modal').fadeOut();
@@ -190,5 +189,23 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 1200) {
+            $('.up').classList.add("up_active");
+        } else {
+            $('.up').classList.remove("up_active");
+        }    
+    });
+
+    $(function(){
+        $("a[href^='#back']").click(function(){
+            var _href = $(this).attr("href");
+            $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+            return false;
+        });
+    });
+
+
 });
 

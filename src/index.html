@@ -17,13 +17,13 @@
         <div class="container">
             <!-- <img src="img/2.jpg" class="bg_header" alt="bg_header" loading="lazy"> -->
             <div class="row">
-                <nav class="col-lg-8 menu">
-                        <a href="#" class="menu__link"> Моя история </a>
-                        <a href="#" class="menu__link"> Убеждения </a>
-                        <a href="#" class="menu__link"> Виды терапии </a>
-                        <a href="#" class="menu__link"> Особенности </a>
-                        <a href="#" class="menu__link"> Запись </a>
-                        <a href="#" class="menu__link"> Контакты </a>	
+                <nav class="col-lg-8 menu" id="back">
+                        <a href="#history" class="menu__link"> Моя история </a>
+                        <a href="#thougths" class="menu__link"> Публикации </a>
+                        <a href="#price_rate" class="menu__link"> Цены </a>
+                        <a href="#features" class="menu__link"> Особенности </a>
+                        <a href="#order_now" class="menu__link"> Запись </a>
+                        <a href="#contacts" class="menu__link"> Контакты </a>	
                 </nav>
                 <div class="offset-0 col-6 col-sm-7 offset-lg-0 col-lg-2 header__callback">
                     <div class="header__callback__desc"> Есть вопросы?</div>
@@ -44,7 +44,7 @@
         <!-- <img src="img/2.jpg" class="bg_header" alt="bg_header" loading="lazy"> -->
     </header>
 
-    <section class="description">
+    <section class="description" id="features">
         <div class="container">
             <div class="description__subtitle"><h3> Особенности терапии </h3></div>
             <div class="row">
@@ -96,10 +96,10 @@
         </div>
     </section>
     
-    <div class="slider">
+    <div class="slider" id="thougths">
 		<div class="container">
             <div class="row">
-                <div class="slider__title"><h3> Убеждения...</h3>
+                <div class="slider__title"><h3> Публикации...</h3>
                 </div>  
                 <div class="col-12 slider__content__wrapper">
                     <div class="slider__content__block"> 
@@ -198,7 +198,7 @@
 		</div>
     </div>
 
-    <section class="ordering">
+    <section class="ordering" id="order_now">
         <div class="container">
            <h3> Запись на консультацию </h3>
            <div class="ordering__wrapper">
@@ -251,7 +251,7 @@
                 <div class="tabloids__tabs__item"> on-line консультация  </div>
                 <div class="tabloids__tabs__item"> психотерапия </div>
             </div>
-            <div class="tabloids__tabscontent">
+            <div class="tabloids__tabscontent" id="history">
                 <div class="tabscontent__wrapper tabscontent__wrapper_active">
                     <div class="tabscontent__img"><img src="img/1.jpg" alt="picture_1" loading="lazy"></div>
                     <div class="tabscontent__desc"> <p> <strong>Психика - не мессенджер. Моментально не доходит!</strong> <br><br>
@@ -299,7 +299,7 @@
         </div>
     </article>
 
-    <section class="prices">
+    <section class="prices" id="price_rate">
 		<div class="container">
 			<div class="prices__cover">
 				<h3> Консультации и цены </h3>
@@ -328,7 +328,7 @@
 		</div>		
     </section>
     
-    <footer>
+    <footer id="contacts">
         <div class="container">
             <div class="title"><h3> Контакты </h3></div>
 
@@ -346,6 +346,8 @@
             </div>	
         </div>
     </footer>
+
+    <a href="#back" class="up"> <span class="icon-circle-up"></span> </a>
     
     <script src="JS/jquery.min.js"></script>
 	<script src="JS/slick.min.js"></script>
